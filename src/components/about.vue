@@ -3,7 +3,7 @@
     <app-header></app-header>
     <h1>We are Vanky</h1>
     <button @click="toggleShow()">Click me!</button>
-    <div v-bind:class="[isShowing ? setClass : '', addClass]">
+    <div class="animation" v-bind:class="[isShowing ? setClass : '', addClass]">
       <p>{{ msg }}</p>
     </div>
     <div v-show="showFooter">
@@ -41,25 +41,33 @@ export default {
 <style lang="sass" scoped>
 
 $color-blue: blue
-$color-white: white
+$color-content: black
 
 .weare
-  background-color: $color-blue
   h1
-    color: $color-white
+    color: $color-content
+
+.animation
+  background-color: $color-blue
+  overflow: hidden
+  width: 50%
+  margin: auto
+  p
+    color: white
 
 button
   display: block
-  background-color: $color-white
-  margin: auto
+  background-color: $color-content
+  margin: 20px auto
   transition: all 1s ease
   padding: 10px 7px
+  color: white
   &:hover
     background-color: green
-    color: $color-white
+    color: $color-content
 
 p
-  color: $color-white
+  color: $color-content
   padding: 30px 0
 
 .showAnimation
@@ -67,6 +75,6 @@ p
   height: 0
 
 .activate-show
-  height: 90px
+  height: 110px
 
 </style>
