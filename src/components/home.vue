@@ -1,5 +1,6 @@
 <template>
-  <div class="home">
+  <div>
+    <app-header></app-header>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -17,16 +18,25 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <div>
+      <app-footer></app-footer>
+    </div>
   </div>
 </template>
 
 <script>
+import header from './header.vue'
+import footer from './footer.vue'
+
 export default {
-  name: 'home',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App Yuki'
     }
+  },
+  components: {
+    'app-header': header,
+    'app-footer': footer
   }
 }
 </script>

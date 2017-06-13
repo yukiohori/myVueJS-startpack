@@ -1,28 +1,39 @@
 <template>
   <div class="weare">
+    <app-header></app-header>
     <h1>We are Vanky</h1>
     <button @click="toggleShow()">Click me!</button>
     <div v-bind:class="[isShowing ? setClass : '', addClass]">
       <p>{{ msg }}</p>
     </div>
+    <div v-show="showFooter">
+      <app-footer></app-footer>
+    </div>
   </div>
 </template>
 
 <script>
+import header from './header.vue'
+import footer from './footer.vue'
+
 export default {
-  name: 'weare',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App Yuki',
       isShowing: true,
       setClass: 'activate-show',
-      addClass: 'showAnimation'
+      addClass: 'showAnimation',
+      showFooter: false
     }
   },
   methods: {
     toggleShow () {
       this.isShowing = !this.isShowing
     }
+  },
+  components: {
+    'app-header': header,
+    'app-footer': footer
   }
 }
 </script>
