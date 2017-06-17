@@ -8,7 +8,7 @@ import content2 from '@/components/content2'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     { path: '/', component: Home },
     { path: '/about', component: About },
