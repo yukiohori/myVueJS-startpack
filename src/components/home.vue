@@ -2,6 +2,14 @@
   <div class="home">
     <app-header></app-header>
     <h1>{{ msg }}</h1>
+    <div class="row">
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+    </div>
     <div>
       <app-footer></app-footer>
     </div>

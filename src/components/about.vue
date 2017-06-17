@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <app-header></app-header>
-    <h1>We are Vanky</h1>
+    <h1>This is About Page</h1>
     <button @click="toggleShow()">Click me!</button>
     <div class="animation" v-bind:class="[isShowing ? setClass : '', addClass]">
       <p>{{ msg }}</p>
