@@ -1,5 +1,5 @@
 <template>
-  <div class="weare">
+  <div class="about">
     <app-header></app-header>
     <h1>We are Vanky</h1>
     <button @click="toggleShow()">Click me!</button>
@@ -23,7 +23,7 @@ export default {
       isShowing: true,
       setClass: 'activate-show',
       addClass: 'showAnimation',
-      showFooter: false
+      showFooter: true
     }
   },
   methods: {
@@ -43,9 +43,11 @@ export default {
 $color-blue: blue
 $color-content: black
 
-.weare
+.about
+  margin-top: 50px
   h1
     color: $color-content
+
 
 .animation
   background-color: $color-blue

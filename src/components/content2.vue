@@ -85,4 +85,7 @@ h2,p,input
   display: block
   margin: auto
 
+.content2
+  margin-top: 50px
+
 </style>

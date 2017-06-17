@@ -1,5 +1,5 @@
 <template>
-  <div id="content1">
+  <div id="content1" class="content1">
     <app-header></app-header>
     <h2>Write Content</h2>
     <textarea @input="content = $event.target.value" ></textarea>
@@ -48,5 +48,10 @@ textarea {
   margin: auto;
   display: block;
 }
+
+.content1{
+  padding-top: 50px;
+}
+
 
 </style>
