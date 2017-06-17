@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="nav-bar">
+  <div class="nav-bar">
+    <div class="row nav-style">
       <div class="menu-bar"><router-link to="/">Home</router-link></div>
       <div class="menu-bar"><router-link to="/about">About</router-link></div>
       <div class="menu-bar show-for-medium"><router-link to="/"><img class="logo" src="../assets/logo.png"></router-link></div>
@@ -30,10 +30,11 @@ textarea
   top: 0
   left: 0
   width: 100%
+
+.nav-style
   display: flex
   flex-direction: row
   justify-content: space-between
-
 
 .menu-bar
   text-align: center

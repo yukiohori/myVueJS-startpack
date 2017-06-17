@@ -1,10 +1,12 @@
 <template>
   <div class="about">
     <app-header></app-header>
-    <h1>This is About Page</h1>
-    <button @click="toggleShow()">Click me!</button>
-    <div class="animation" v-bind:class="[isShowing ? setClass : '', addClass]">
-      <p>{{ msg }}</p>
+    <div class="row">
+      <h1>This is About Page</h1>
+      <button @click="toggleShow()">Click me!</button>
+      <div class="animation" v-bind:class="[isShowing ? setClass : '', addClass]">
+        <p>{{ msg }}</p>
+      </div>
     </div>
     <div v-show="showFooter">
       <app-footer></app-footer>

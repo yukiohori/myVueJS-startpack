@@ -9,6 +9,60 @@
       <div class="small-12 medium-6 large-6 column">
         <h2>Column 2</h2>
       </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
     </div>
     <div>
       <app-footer></app-footer>
@@ -23,8 +77,21 @@ import footer from './footer.vue'
 export default {
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App Yuki'
+      msg: 'Welcome to Your Vue.js App Yuki',
+      scrolled: false
     }
+  },
+  methods: {
+    handleScroll () {
+      this.scrolled = window.scrollY > 0
+      // console.log(window.scrollY)
+    }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
   },
   components: {
     'app-header': header,
