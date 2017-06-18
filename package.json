@@ -1,8 +1,8 @@
 {
-  "name": "my-project",
+  "name": "yos-website",
   "version": "1.0.0",
-  "description": "Vanky Project",
-  "author": "Yuki and Ken",
+  "description": "YOS Website",
+  "author": "Yuki Ohori",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
