@@ -1,10 +1,12 @@
 <template>
-  <div class="weare">
+  <div class="about">
     <app-header></app-header>
-    <h1>We are Vanky</h1>
-    <button @click="toggleShow()">Click me!</button>
-    <div class="animation" v-bind:class="[isShowing ? setClass : '', addClass]">
-      <p>{{ msg }}</p>
+    <div class="row">
+      <h1>This is About Page</h1>
+      <button @click="toggleShow()">Click me!</button>
+      <div class="animation" v-bind:class="[isShowing ? setClass : '', addClass]">
+        <p>{{ msg }}</p>
+      </div>
     </div>
     <div v-show="showFooter">
       <app-footer></app-footer>
@@ -23,7 +25,7 @@ export default {
       isShowing: true,
       setClass: 'activate-show',
       addClass: 'showAnimation',
-      showFooter: false
+      showFooter: true
     }
   },
   methods: {
@@ -43,9 +45,11 @@ export default {
 $color-blue: blue
 $color-content: black
 
-.weare
+.about
+  margin-top: 50px
   h1
     color: $color-content
+
 
 .animation
   background-color: $color-blue

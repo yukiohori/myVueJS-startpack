@@ -1,6 +1,9 @@
 # my-project
 
-> Vanky Project
+> VueJS Yuki StarterPack!
+
+- Mobile Responsive (Foundation)
+- Firebase (Real Time Database)
 
 ## Build Setup
 

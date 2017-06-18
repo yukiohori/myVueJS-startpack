@@ -1,19 +1,21 @@
 <template>
   <div class="content2">
     <app-header></app-header>
-    <h2>Connect to Database (Firebase!)</h2>
-    <p>Description!</p>
-    <input type="text" v-model="content" v-on:keyup.enter="addData" placeholder="Add" />
-    <p v-for="(data, index) in contentArray">{{ data }} <button v-on:click="removeData(index)">X</button></p>
-    <li v-for="chat in chats" class="user" :key="chat['.key']">
-      <span>{{chat.name}} - {{chat.content}}</span>
-      <button v-on:click="removeChat(chat)">X</button>
-    </li>
-    <form id="form" v-on:submit.prevent="sendChat">
-      <input type="text" v-model="newChat.name" placeholder="Username">
-      <textarea v-model="newChat.content" placeholder="Write Content"></textarea>
-      <input type="submit" value="Chat!">
-    </form>
+    <div class="row">
+      <h2>Connect to Database (Firebase!)</h2>
+      <p>Description!</p>
+      <input type="text" v-model="content" v-on:keyup.enter="addData" placeholder="Add" />
+      <p v-for="(data, index) in contentArray">{{ data }} <button v-on:click="removeData(index)">X</button></p>
+      <li v-for="chat in chats" class="user" :key="chat['.key']">
+        <span>{{chat.name}} - {{chat.content}}</span>
+        <button v-on:click="removeChat(chat)">X</button>
+      </li>
+      <form id="form" v-on:submit.prevent="sendChat">
+        <input type="text" v-model="newChat.name" placeholder="Username">
+        <textarea v-model="newChat.content" placeholder="Write Content"></textarea>
+        <input type="submit" value="Chat!">
+      </form>
+    </div>
     <app-footer></app-footer>
   </div>
 </template>
@@ -84,5 +86,8 @@ export default {
 h2,p,input
   display: block
   margin: auto
+
+.content2
+  margin-top: 50px
 
 </style>

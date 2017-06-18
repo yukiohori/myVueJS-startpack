@@ -1,11 +1,13 @@
 <template>
-  <div id="content1">
+  <div id="content1" class="content1">
     <app-header></app-header>
-    <h2>Write Content</h2>
-    <textarea @input="content = $event.target.value" ></textarea>
-    <span>Color: </span><input type="text" @input="setColor = $event.target.value" />
-    <div :style="'background-color: '+setColor">
-      <p>{{ content }}</p>
+    <div class="row">
+      <h2>Write Content</h2>
+      <textarea @input="content = $event.target.value" ></textarea>
+      <span>Color: </span><input type="text" @input="setColor = $event.target.value" />
+      <div :style="'background-color: '+setColor">
+        <p>{{ content }}</p>
+      </div>
     </div>
     <app-footer></app-footer>
   </div>
@@ -48,5 +50,10 @@ textarea {
   margin: auto;
   display: block;
 }
+
+.content1{
+  padding-top: 50px;
+}
+
 
 </style>

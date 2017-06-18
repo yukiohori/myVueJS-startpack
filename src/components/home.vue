@@ -1,7 +1,69 @@
 <template>
-  <div>
+  <div class="home">
     <app-header></app-header>
     <h1>{{ msg }}</h1>
+    <div class="row">
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 1</h2>
+      </div>
+      <div class="small-12 medium-6 large-6 column">
+        <h2>Column 2</h2>
+      </div>
+    </div>
     <div>
       <app-footer></app-footer>
     </div>
@@ -15,8 +77,21 @@ import footer from './footer.vue'
 export default {
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App Yuki'
+      msg: 'Welcome to Your Vue.js App Yuki',
+      scrolled: false
     }
+  },
+  methods: {
+    handleScroll () {
+      this.scrolled = window.scrollY > 0
+      // console.log(window.scrollY)
+    }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
   },
   components: {
     'app-header': header,
@@ -26,22 +101,23 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
+<style lang="sass" scoped>
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+.home
+  margin-top: 50px
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+h1, h2
+  font-weight: normal
 
-a {
-  color: #42b983;
-}
+ul
+  list-style-type: none
+  padding: 0
+
+li
+  display: inline-block
+  margin: 0 10px
+
+a
+  color: #42b983
+
 </style>
