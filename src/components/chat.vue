@@ -2,7 +2,7 @@
   <div class="content2">
     <app-header></app-header>
     <div class="row">
-      <h2 class="text-center">Let's Chat! (Firebase)</h2>
+      <h2 class="text-center">Public Chat! (Firebase)</h2>
       <div class="small-12 medium-3 large-3 column">
         <div v-show="isLogin==false" class="user-chat-style">
             <h2 class="text-center">User</h2>
@@ -14,7 +14,7 @@
         <div v-show="isLogin==true" class="user-chat-style">
           <form id="form" v-on:submit.prevent="sendChat">
             <p>{{ newChat.name }}</p>
-            <textarea v-model="newChat.content" placeholder="Write Content"></textarea>
+            <textarea v-on:keyup.enter="sendChat" v-model="newChat.content" placeholder="Write Content"></textarea>
             <div class="text-center">
               <input type="submit" value="Chat!">
               <button @click="leaving()">Leave</button>
@@ -129,10 +129,10 @@ export default {
         this.chatStart()
       }
     }
-  },
-  destroyed () {
-    usersRef.child(this.userID).remove()
   }
+  // destroyed () {
+  //   usersRef.child(this.userID).remove()
+  // }
 }
 </script>
 
@@ -142,6 +142,9 @@ export default {
 h2,p,input
   display: block
   margin: auto
+
+h3
+  margin: 0
 
 .content2
   margin-top: 50px
