@@ -8,10 +8,7 @@ import Chat from '@/components/chat'
 Vue.use(Router)
 
 export default new Router({
-<<<<<<< HEAD
-=======
   // mode: 'history',
->>>>>>> bb80ab84e1f1e01beecbd86a27077b6ded959836
   routes: [
     { path: '/', component: Home },
     { path: '/about', component: About },
