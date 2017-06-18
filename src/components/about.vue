@@ -4,7 +4,7 @@
     <div class="row">
       <h1>This is About Page</h1>
       <button @click="toggleShow()">Click me!</button>
-      <div class="animation" v-bind:class="[isShowing ? setClass : '', addClass]">
+      <div class="animation text-center" v-bind:class="[isShowing ? setClass : '', addClass]">
         <p>{{ msg }}</p>
       </div>
     </div>
@@ -42,7 +42,6 @@ export default {
 
 <style lang="sass" scoped>
 
-$color-blue: blue
 $color-content: black
 
 .about
@@ -52,7 +51,7 @@ $color-content: black
 
 
 .animation
-  background-color: $color-blue
+  background-color: cadetblue
   overflow: hidden
   width: 50%
   margin: auto
@@ -67,7 +66,7 @@ button
   padding: 10px 7px
   color: white
   &:hover
-    background-color: green
+    background-color: cadetblue
     color: $color-content
 
 p

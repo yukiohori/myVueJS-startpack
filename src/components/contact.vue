@@ -2,12 +2,16 @@
   <div id="content1" class="content1">
     <app-header></app-header>
     <div class="row">
-      <h2>Write Content</h2>
-      <textarea @input="content = $event.target.value" ></textarea>
-      <span>Color: </span><input type="text" @input="setColor = $event.target.value" />
+      <h2 class="text-center">Write Content</h2>
+      <p class="text-center">Description!</p>
+      <textarea v-model="content" @input="content = $event.target.value" v-on:keyup.enter="addData" placeholder="Add"></textarea>
+      <div class="text-center">
+        <span>Color: </span><input type="text" @input="setColor = $event.target.value" />
+      </div>
       <div :style="'background-color: '+setColor">
         <p>{{ content }}</p>
       </div>
+       <p v-for="(data, index) in contentArray">{{ data }} <button v-on:click="removeData(index)">X</button></p>
     </div>
     <app-footer></app-footer>
   </div>
@@ -23,7 +27,8 @@ export default {
     return {
       content: '',
       isShowing: true,
-      setColor: ''
+      setColor: '',
+      contentArray: []
     }
   },
   components: {
@@ -31,8 +36,17 @@ export default {
     'app-footer': footer
   },
   methods: {
-    toggleShow () {
+    toggleShow: () => {
       this.isShowing = !this.isShowing
+    },
+    addData: function () {
+      if (this.content !== '') {
+        this.contentArray.push(this.content)
+        this.content = ''
+      }
+    },
+    removeData: function (indexData) {
+      this.contentArray.splice(indexData, 1)
     }
   }
 }

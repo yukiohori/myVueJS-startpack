@@ -4,8 +4,8 @@
       <div class="menu-bar"><router-link to="/">Home</router-link></div>
       <div class="menu-bar"><router-link to="/about">About</router-link></div>
       <div class="menu-bar show-for-medium"><router-link to="/"><img class="logo" src="../assets/logo.png"></router-link></div>
-      <div class="menu-bar"><router-link to="/content1">Content 1</router-link></div>
-      <div class="menu-bar"><router-link to="/content2">Content 2</router-link></div>
+      <div class="menu-bar"><router-link to="/content1">Contact</router-link></div>
+      <div class="menu-bar"><router-link to="/content2">Chat</router-link></div>
     </div>
   </div>
 </template>
