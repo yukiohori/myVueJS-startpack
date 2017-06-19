@@ -20,6 +20,7 @@
   text-align: center;
   p{
     margin: 0;
+    color: white;
   }
 }
 
