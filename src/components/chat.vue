@@ -2,7 +2,7 @@
   <div class="content2">
     <app-header></app-header>
     <div class="row">
-      <h2 class="text-center">Public Chat! (Firebase)</h2>
+      <h1 class="text-center">Public Chat! (Firebase)</h1>
       <div class="small-12 medium-3 large-3 column">
         <div v-show="isLogin==false" class="user-chat-style">
             <h2 class="text-center">User</h2>
@@ -13,7 +13,7 @@
         </div>
         <div v-show="isLogin==true" class="user-chat-style">
           <form id="form" v-on:submit.prevent="sendChat">
-            <p>{{ newChat.name }}</p>
+            <p class="text-center">{{ newChat.name }}</p>
             <textarea v-on:keyup.enter="sendChat" v-model="newChat.content" placeholder="Write Content"></textarea>
             <div class="text-center">
               <input type="submit" value="Chat!">

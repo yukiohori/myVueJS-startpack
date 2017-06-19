@@ -14,5 +14,6 @@ export default {
 @import './styles/main.scss';
 h1{
   text-align: center;
+  font-weight: normal;
 }
 </style>

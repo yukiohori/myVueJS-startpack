@@ -46,9 +46,6 @@ $color-content: black
 
 .about
   margin-top: 50px
-  h1
-    color: $color-content
-
 
 .animation
   background-color: cadetblue
@@ -78,6 +75,6 @@ p
   height: 0
 
 .activate-show
-  height: 110px
+  height: 130px
 
 </style>

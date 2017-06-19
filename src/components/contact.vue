@@ -2,7 +2,7 @@
   <div id="content1" class="content1">
     <app-header></app-header>
     <div class="row">
-      <h2 class="text-center">Write Content</h2>
+      <h1 class="text-center">Contact Page</h1>
       <p class="text-center">Description!</p>
       <textarea v-model="content" @input="content = $event.target.value" v-on:keyup.enter="addData" placeholder="Add"></textarea>
       <div class="text-center">
