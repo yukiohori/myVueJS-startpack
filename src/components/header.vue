@@ -1,12 +1,16 @@
 <template>
   <div class="nav-bar">
-    <div class="row nav-style">
+    <div class="row nav-style show-for-large">
       <div class="menu-bar show-for-medium"><router-link to="/"><img class="logo" src="../assets/logo.png"></router-link></div>
       <div class="menu-bar"><router-link to="/">Home</router-link></div>
       <div class="menu-bar"><router-link to="/about">About</router-link></div>
       <div class="menu-bar"><router-link to="/portfolio">Portfolio</router-link></div>
       <div class="menu-bar"><router-link to="/content1">Contact</router-link></div>
       <div class="menu-bar"><router-link to="/content2">Chat</router-link></div>
+    </div>
+    <div class="row nav-style hide-for-large">
+      <div class="menu-bar"><router-link to="/"><img class="logo" src="../assets/logo.png"></router-link></div>
+      <div class="menu-bar"><i class="fa fa-bars" aria-hidden="true"></i></div>
     </div>
   </div>
 </template>
@@ -42,5 +46,7 @@ textarea
   width: 100%
   a
     text-decoration: none
+  i
+    color: white
 
 </style>

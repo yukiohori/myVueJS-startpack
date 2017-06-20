@@ -27,7 +27,7 @@ export default {
   data () {
     return {
       currentNumber: 0,
-      msg: 'Welcome to Your Vue.js App Yuki',
+      msg: 'Welcome to Vue.js App Yuki',
       scrolled: false
     }
   },
