@@ -1,7 +1,7 @@
 <template>
   <div class="footer-style">
     <p>
-      This is Footer
+      This is Footern  dfsdfsf
     </p>
   </div>
 </template>
